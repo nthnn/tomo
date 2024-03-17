@@ -6,6 +6,10 @@
 
 #include <tomo_scene.h>
 
+TomoRestScene::TomoRestScene() {
+	this->hasNoInterrupt();
+}
+
 void TomoRestScene::rendition() {
 	TomoScene::renderScene<TomoClosingEyesScene>(1);
     TomoScene::renderScene<TomoExhaustedScene>(1);

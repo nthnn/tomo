@@ -5,6 +5,8 @@
 
 class TomoSleepingScene : public TomoScene {
 public:
+    TomoSleepingScene();
+
     void rendition();
     void onInteract();
 };

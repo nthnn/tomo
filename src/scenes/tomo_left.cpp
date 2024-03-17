@@ -536,6 +536,10 @@ const uint8_t tomo_left_8[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
+TomoLeftScene::TomoLeftScene() {
+	this->hasNoInterrupt();
+}
+
 void TomoLeftScene::rendition() {
     TomoDisplay::renderBitmap(tomo_left_1), delay(1000);
     TomoDisplay::renderBitmap(tomo_left_2), delay(5);

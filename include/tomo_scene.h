@@ -7,22 +7,30 @@
 
 class TomoScene {
 private:
+    bool _hasInterrupt = true,
+        _interruptEnabled = true;
     uint8_t repeatCount = 1;
 
 public:
-    bool shouldContinue = true;
     static void initializeTouchPin();
 
     void render();
     virtual void rendition() = 0;
     virtual void onInteract() = 0;
 
+    void disableInterrupt();
+    void hasNoInterrupt();
+    bool hasInterrupt();
+
     void setRepeatCount(uint8_t repeatCount);
     uint8_t getRepeatCount() const;
 
     template <typename T>
-    static void renderScene(uint8_t repeatCount) {
+    static void renderScene(uint8_t repeatCount, bool interruptEnabled = true) {
         T scene;
+        if(!interruptEnabled)
+            scene.disableInterrupt();
+
         scene.setRepeatCount(repeatCount);
         scene.render();
     }

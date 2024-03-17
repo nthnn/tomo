@@ -1,4 +1,6 @@
 #include <scenes/tomo_closing_eyes.h>
+#include <scenes/tomo_interrupta.h>
+#include <scenes/tomo_opening_eyes.h>
 
 const uint8_t tomo_closing_eyes_1[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -536,6 +538,8 @@ const uint8_t tomo_closing_eyes_8[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
+TomoClosingEyesScene::TomoClosingEyesScene() { }
+
 void TomoClosingEyesScene::rendition() {
     TomoDisplay::renderBitmap(tomo_closing_eyes_1), delay(1000);
     TomoDisplay::renderBitmap(tomo_closing_eyes_2), delay(5);
@@ -547,4 +551,7 @@ void TomoClosingEyesScene::rendition() {
     TomoDisplay::renderBitmap(tomo_closing_eyes_8), delay(5);
 }
 
-void TomoClosingEyesScene::onInteract() { }
+void TomoClosingEyesScene::onInteract() {
+	TomoScene::renderScene<TomoOpeningEyesScene>(1, false);
+	TomoScene::renderScene<TomoInterruptAScene>(1);
+}

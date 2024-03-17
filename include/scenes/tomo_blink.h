@@ -5,6 +5,8 @@
 
 class TomoBlinkScene : public TomoScene {
 public:
+    TomoBlinkScene();
+
     void rendition();
     void onInteract();
 };

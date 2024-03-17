@@ -5,6 +5,8 @@
 
 class TomoExhaustedScene : public TomoScene {
 public:
+    TomoExhaustedScene();
+
     void rendition();
     void onInteract();
 };

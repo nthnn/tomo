@@ -4,6 +4,10 @@
 
 #include <tomo_scene.h>
 
+TomoBlinkScene::TomoBlinkScene() {
+	this->hasNoInterrupt();
+}
+
 void TomoBlinkScene::rendition() {
 	TomoScene::renderScene<TomoClosingEyesScene>(1);
 	TomoScene::renderScene<TomoOpeningEyesScene>(1);

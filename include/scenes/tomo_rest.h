@@ -5,6 +5,8 @@
 
 class TomoRestScene : public TomoScene {
 public:
+    TomoRestScene();
+
     void rendition();
     void onInteract();
 };

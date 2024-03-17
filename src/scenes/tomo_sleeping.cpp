@@ -402,6 +402,10 @@ const uint8_t tomo_sleeping_6[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
+TomoSleepingScene::TomoSleepingScene() {
+	this->hasNoInterrupt();
+}
+
 void TomoSleepingScene::rendition() {
     TomoDisplay::renderBitmap(tomo_sleeping_1), delay(100);
     TomoDisplay::renderBitmap(tomo_sleeping_2), delay(100);

@@ -5,6 +5,8 @@
 
 class TomoOpeningEyesScene : public TomoScene {
 public:
+    TomoOpeningEyesScene();
+
     void rendition();
     void onInteract();
 };
