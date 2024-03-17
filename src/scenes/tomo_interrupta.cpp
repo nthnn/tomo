@@ -1,4 +1,3 @@
-#include <scenes/tomo_blink.h>
 #include <scenes/tomo_interrupta.h>
 
 const uint8_t tomo_interrupta_1[] PROGMEM = {
