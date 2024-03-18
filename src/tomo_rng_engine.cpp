@@ -9,5 +9,5 @@ void TomoRNGEngine::initializeEngine() {
 }
 
 uint8_t TomoRNGEngine::get(uint8_t min, uint8_t max) {
-    return (uint8_t) random(min, max);
+    return (uint8_t) random(min, max + 1);
 }
