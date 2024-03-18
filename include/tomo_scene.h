@@ -21,18 +21,21 @@ public:
     void disableInterrupt();
     void hasNoInterrupt();
     bool hasInterrupt();
+    bool wasInterrupted();
 
     void setRepeatCount(uint8_t repeatCount);
     uint8_t getRepeatCount() const;
 
     template <typename T>
-    static void renderScene(uint8_t repeatCount, bool interruptEnabled = true) {
+    static bool renderScene(uint8_t repeatCount, bool interruptEnabled = true) {
         T scene;
         if(!interruptEnabled)
             scene.disableInterrupt();
 
         scene.setRepeatCount(repeatCount);
         scene.render();
+
+        return scene.wasInterrupted();
     }
 };
 

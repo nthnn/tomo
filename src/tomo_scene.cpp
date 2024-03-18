@@ -1,11 +1,10 @@
 #include <tomo_scene.h>
 
-bool shouldContinue = true;
-TomoScene* instancePtr = nullptr;
+bool shouldContinue = true,
+    interrupted = false;
 
 void IRAM_ATTR touchInterruptWrapper() {
-    if(instancePtr != nullptr)
-        shouldContinue = false;
+    shouldContinue = false;
 }
 
 void TomoScene::disableInterrupt() {
@@ -22,18 +21,23 @@ void TomoScene::initializeTouchPin() {
 }
 
 void TomoScene::render() {
-    instancePtr = this;
-
     for(uint8_t i = 0; i < this->getRepeatCount(); i++) {
         if(!shouldContinue && this->_hasInterrupt && this->_interruptEnabled) {
             this->onInteract();
+
             shouldContinue = true;
+            interrupted = true;
 
             break;
         }
 
         this->rendition();
+        interrupted = false;
     }
+}
+
+bool TomoScene::wasInterrupted() {
+    return interrupted;
 }
 
 void TomoScene::setRepeatCount(uint8_t repeatCount) {

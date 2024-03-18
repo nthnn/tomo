@@ -11,11 +11,17 @@ TomoRestScene::TomoRestScene() {
 }
 
 void TomoRestScene::rendition() {
-	TomoScene::renderScene<TomoClosingEyesScene>(1);
-    TomoScene::renderScene<TomoExhaustedScene>(1);
-    TomoScene::renderScene<TomoSleepingScene>(12);
-    TomoScene::renderScene<TomoExhaustedScene>(1);
-	TomoScene::renderScene<TomoOpeningEyesScene>(1);
+	if(TomoScene::renderScene<TomoClosingEyesScene>(1))
+        return;
+
+    if(TomoScene::renderScene<TomoExhaustedScene>(1))
+        return;
+
+    if(TomoScene::renderScene<TomoSleepingScene>(12))
+        return;
+
+	if(TomoScene::renderScene<TomoOpeningEyesScene>(1))
+        return;
 }
 
 void TomoRestScene::onInteract() { }

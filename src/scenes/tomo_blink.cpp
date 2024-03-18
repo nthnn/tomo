@@ -9,8 +9,11 @@ TomoBlinkScene::TomoBlinkScene() {
 }
 
 void TomoBlinkScene::rendition() {
-	TomoScene::renderScene<TomoClosingEyesScene>(1);
-	TomoScene::renderScene<TomoOpeningEyesScene>(1);
+	if(TomoScene::renderScene<TomoClosingEyesScene>(1))
+		return;
+
+	if(TomoScene::renderScene<TomoOpeningEyesScene>(1))
+		return;
 }
 
 void TomoBlinkScene::onInteract() { }
