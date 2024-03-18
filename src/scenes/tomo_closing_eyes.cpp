@@ -1,5 +1,5 @@
 #include <scenes/tomo_closing_eyes.h>
-#include <scenes/tomo_interrupta.h>
+#include <scenes/tomo_interrupt.h>
 #include <scenes/tomo_opening_eyes.h>
 
 const uint8_t tomo_closing_eyes_1[] PROGMEM = {
@@ -553,5 +553,5 @@ void TomoClosingEyesScene::rendition() {
 
 void TomoClosingEyesScene::onInteract() {
 	TomoScene::renderScene<TomoOpeningEyesScene>(1, false);
-	TomoScene::renderScene<TomoInterruptAScene>(1);
+	TomoScene::renderScene<TomoInterruptScene>(1);
 }
