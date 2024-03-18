@@ -1,3 +1,4 @@
+#include <scenes/tomo_opening_eyes.h>
 #include <scenes/tomo_sleeping.h>
 
 const uint8_t tomo_sleeping_1[] PROGMEM = {
@@ -402,9 +403,7 @@ const uint8_t tomo_sleeping_6[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-TomoSleepingScene::TomoSleepingScene() {
-	this->hasNoInterrupt();
-}
+TomoSleepingScene::TomoSleepingScene() { }
 
 void TomoSleepingScene::rendition() {
     TomoDisplay::renderBitmap(tomo_sleeping_1), delay(100);
@@ -415,4 +414,6 @@ void TomoSleepingScene::rendition() {
     TomoDisplay::renderBitmap(tomo_sleeping_6), delay(100);
 }
 
-void TomoSleepingScene::onInteract() { }
+void TomoSleepingScene::onInteract() {
+	TomoScene::renderScene<TomoOpeningEyesScene>(1);
+}
