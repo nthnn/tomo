@@ -4,7 +4,8 @@ bool shouldContinue = true,
     interrupted = false;
 
 void IRAM_ATTR touchInterruptWrapper() {
-    shouldContinue = false;
+    if(shouldContinue)
+        shouldContinue = false;
 }
 
 void TomoScene::disableInterrupt() {
@@ -21,18 +22,17 @@ void TomoScene::initializeTouchPin() {
 }
 
 void TomoScene::render() {
+    shouldContinue = true;
+    interrupted = false;
+
     for(uint8_t i = 0; i < this->getRepeatCount(); i++) {
         if(!shouldContinue && this->_hasInterrupt && this->_interruptEnabled) {
-            this->onInteract();
-
-            shouldContinue = true;
             interrupted = true;
-
+            this->onInteract();
             break;
         }
 
         this->rendition();
-        interrupted = false;
     }
 }
 
