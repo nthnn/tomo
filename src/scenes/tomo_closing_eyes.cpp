@@ -538,20 +538,19 @@ const uint8_t tomo_closing_eyes_8[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-TomoClosingEyesScene::TomoClosingEyesScene() { }
+TomoClosingEyesScene::TomoClosingEyesScene() {
+	this->hasNoInterrupt();
+}
 
 void TomoClosingEyesScene::rendition() {
-    TomoDisplay::renderBitmap(tomo_closing_eyes_1), delay(1000);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_2), delay(5);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_3), delay(5);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_4), delay(5);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_5), delay(5);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_6), delay(5);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_7), delay(5);
-    TomoDisplay::renderBitmap(tomo_closing_eyes_8), delay(5);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_1, 1000);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_2);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_3);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_4);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_5);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_6);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_7);
+    TomoDisplay::renderBitmap(tomo_closing_eyes_8);
 }
 
-void TomoClosingEyesScene::onInteract() {
-	TomoScene::renderScene<TomoOpeningEyesScene>(1, false);
-	TomoScene::renderScene<TomoInterruptScene>(1);
-}
+void TomoClosingEyesScene::onInteract() { }

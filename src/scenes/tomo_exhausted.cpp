@@ -206,19 +206,19 @@ TomoExhaustedScene::TomoExhaustedScene() {
 }
 
 void TomoExhaustedScene::rendition() {
-    TomoDisplay::renderBitmap(tomo_exhausted_1), delay(5);
-    TomoDisplay::renderBitmap(tomo_exhausted_2), delay(50);
-    TomoDisplay::renderBitmap(tomo_exhausted_3), delay(400);
-    TomoDisplay::renderBitmap(tomo_exhausted_2), delay(50);
-    TomoDisplay::renderBitmap(tomo_exhausted_1), delay(5);
-    TomoDisplay::renderBitmap(tomo_exhausted_2), delay(50);
-    TomoDisplay::renderBitmap(tomo_exhausted_3), delay(800);
-    TomoDisplay::renderBitmap(tomo_exhausted_2), delay(50);
-    TomoDisplay::renderBitmap(tomo_exhausted_1), delay(5);
-    TomoDisplay::renderBitmap(tomo_exhausted_2), delay(50);
-    TomoDisplay::renderBitmap(tomo_exhausted_3), delay(1000);
-    TomoDisplay::renderBitmap(tomo_exhausted_2), delay(50);
-    TomoDisplay::renderBitmap(tomo_exhausted_1), delay(5);
+    TomoDisplay::renderBitmap(tomo_exhausted_1);
+    TomoDisplay::renderBitmap(tomo_exhausted_2, 50);
+    TomoDisplay::renderBitmap(tomo_exhausted_3, 400);
+    TomoDisplay::renderBitmap(tomo_exhausted_2, 50);
+    TomoDisplay::renderBitmap(tomo_exhausted_1);
+    TomoDisplay::renderBitmap(tomo_exhausted_2, 50);
+    TomoDisplay::renderBitmap(tomo_exhausted_3, 800);
+    TomoDisplay::renderBitmap(tomo_exhausted_2, 50);
+    TomoDisplay::renderBitmap(tomo_exhausted_1);
+    TomoDisplay::renderBitmap(tomo_exhausted_2, 50);
+    TomoDisplay::renderBitmap(tomo_exhausted_3, 1000);
+    TomoDisplay::renderBitmap(tomo_exhausted_2, 50);
+    TomoDisplay::renderBitmap(tomo_exhausted_1);
 }
 
 void TomoExhaustedScene::onInteract() { }

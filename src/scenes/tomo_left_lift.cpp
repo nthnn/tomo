@@ -541,21 +541,21 @@ TomoLeftLiftScene::TomoLeftLiftScene() {
 }
 
 void TomoLeftLiftScene::rendition() {
-    TomoDisplay::renderBitmap(tomo_left_lift_1), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_2), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_3), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_4), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_5), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_6), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_7), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_8), delay(1000);
-    TomoDisplay::renderBitmap(tomo_left_lift_7), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_6), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_5), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_4), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_3), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_2), delay(5);
-    TomoDisplay::renderBitmap(tomo_left_lift_1), delay(5);
+    TomoDisplay::renderBitmap(tomo_left_lift_1);
+    TomoDisplay::renderBitmap(tomo_left_lift_2);
+    TomoDisplay::renderBitmap(tomo_left_lift_3);
+    TomoDisplay::renderBitmap(tomo_left_lift_4);
+    TomoDisplay::renderBitmap(tomo_left_lift_5);
+    TomoDisplay::renderBitmap(tomo_left_lift_6);
+    TomoDisplay::renderBitmap(tomo_left_lift_7);
+    TomoDisplay::renderBitmap(tomo_left_lift_8, 1000);
+    TomoDisplay::renderBitmap(tomo_left_lift_7);
+    TomoDisplay::renderBitmap(tomo_left_lift_6);
+    TomoDisplay::renderBitmap(tomo_left_lift_5);
+    TomoDisplay::renderBitmap(tomo_left_lift_4);
+    TomoDisplay::renderBitmap(tomo_left_lift_3);
+    TomoDisplay::renderBitmap(tomo_left_lift_2);
+    TomoDisplay::renderBitmap(tomo_left_lift_1);
 }
 
 void TomoLeftLiftScene::onInteract() { }

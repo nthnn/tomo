@@ -206,10 +206,10 @@ TomoInterruptAScene::TomoInterruptAScene() {
 }
 
 void TomoInterruptAScene::rendition() {
-    TomoDisplay::renderBitmap(tomo_interrupta_1), delay(50);
-    TomoDisplay::renderBitmap(tomo_interrupta_2), delay(1000);
-    TomoDisplay::renderBitmap(tomo_interrupta_3), delay(60);
-    TomoDisplay::renderBitmap(tomo_interrupta_1), delay(50);
+    TomoDisplay::renderBitmap(tomo_interrupta_1, 50);
+    TomoDisplay::renderBitmap(tomo_interrupta_2, 1000);
+    TomoDisplay::renderBitmap(tomo_interrupta_3, 60);
+    TomoDisplay::renderBitmap(tomo_interrupta_1, 50);
 }
 
 void TomoInterruptAScene::onInteract() { }

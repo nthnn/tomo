@@ -1,3 +1,4 @@
+#include <scenes/tomo_angry.h>
 #include <scenes/tomo_interrupt.h>
 #include <scenes/tomo_interrupta.h>
 #include <scenes/tomo_left_lift.h>
@@ -11,17 +12,21 @@ TomoInterruptScene::TomoInterruptScene() {
 }
 
 void TomoInterruptScene::rendition() {
-    switch(TomoRNGEngine::get(0, 2)) {
+    switch(TomoRNGEngine::get(0, 3)) {
+        case TOMO_INT_ANGRY:
+            TomoScene::renderScene<TomoAngryScene>();
+            break;
+
         case TOMO_INT_A:
-            TomoScene::renderScene<TomoInterruptAScene>(1);
+            TomoScene::renderScene<TomoInterruptAScene>();
             break;
 
         case TOMO_INT_LEFT_LIFT:
-            TomoScene::renderScene<TomoLeftLiftScene>(1);
+            TomoScene::renderScene<TomoLeftLiftScene>();
             break;
 
         case TOMO_INT_RIGHT_LIFT:
-            TomoScene::renderScene<TomoRightLiftScene>(1);
+            TomoScene::renderScene<TomoRightLiftScene>();
             break;
     }
 }

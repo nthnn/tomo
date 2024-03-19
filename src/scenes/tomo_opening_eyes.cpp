@@ -1,5 +1,7 @@
 #include <scenes/tomo_opening_eyes.h>
-#include <scenes/tomo_interrupta.h>
+#include <scenes/tomo_interrupt.h>
+
+#include <tomo_scene.h>
 
 const uint8_t tomo_opening_eyes_1[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -542,16 +544,14 @@ TomoOpeningEyesScene::TomoOpeningEyesScene() {
 }
 
 void TomoOpeningEyesScene::rendition() {
-    TomoDisplay::renderBitmap(tomo_opening_eyes_1), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_2), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_3), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_4), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_5), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_6), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_7), delay(5);
-    TomoDisplay::renderBitmap(tomo_opening_eyes_8), delay(1000);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_1);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_2);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_3);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_4);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_5);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_6);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_7);
+    TomoDisplay::renderBitmap(tomo_opening_eyes_8, 1000);
 }
 
-void TomoOpeningEyesScene::onInteract() {
-	TomoScene::renderScene<TomoInterruptAScene>(1);
-}
+void TomoOpeningEyesScene::onInteract() { }

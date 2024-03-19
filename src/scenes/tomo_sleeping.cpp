@@ -406,12 +406,12 @@ const uint8_t tomo_sleeping_6[] PROGMEM = {
 TomoSleepingScene::TomoSleepingScene() { }
 
 void TomoSleepingScene::rendition() {
-    TomoDisplay::renderBitmap(tomo_sleeping_1), delay(100);
-    TomoDisplay::renderBitmap(tomo_sleeping_2), delay(100);
-    TomoDisplay::renderBitmap(tomo_sleeping_3), delay(100);
-    TomoDisplay::renderBitmap(tomo_sleeping_4), delay(100);
-    TomoDisplay::renderBitmap(tomo_sleeping_5), delay(100);
-    TomoDisplay::renderBitmap(tomo_sleeping_6), delay(100);
+    TomoDisplay::renderBitmap(tomo_sleeping_1, 100);
+    TomoDisplay::renderBitmap(tomo_sleeping_2, 100);
+    TomoDisplay::renderBitmap(tomo_sleeping_3, 100);
+    TomoDisplay::renderBitmap(tomo_sleeping_4, 100);
+    TomoDisplay::renderBitmap(tomo_sleeping_5, 100);
+    TomoDisplay::renderBitmap(tomo_sleeping_6, 100);
 }
 
 void TomoSleepingScene::onInteract() {
