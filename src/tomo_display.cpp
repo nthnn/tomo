@@ -75,11 +75,12 @@ bool TomoDisplay::initialize() {
     return result;
 }
 
-void TomoDisplay::renderBitmap(const uint8_t* bitmap) {
+void TomoDisplay::renderBitmap(const uint8_t* bitmap, const uint32_t ms) {
 	TomoDisplay::clear();
 
     tomoDisplay.drawBitmap(0, 0, bitmap, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
     tomoDisplay.display();
+	delay(ms);
 }
 
 void TomoDisplay::renderSplashScreen() {

@@ -19,7 +19,7 @@ class TomoDisplay final {
 public:
     static bool initialize();
 
-    static void renderBitmap(const uint8_t* bitmap);
+    static void renderBitmap(const uint8_t* bitmap, const uint32_t ms = 5);
     static void renderSplashScreen();
     static void clear();
 
