@@ -6,6 +6,7 @@
 typedef enum {
     TOMO_INT_ANGRY,
     TOMO_INT_A,
+    TOMO_INT_HAPPY,
     TOMO_INT_LEFT_LIFT,
     TOMO_INT_RIGHT_LIFT
 } tomo_interrupt_animation;

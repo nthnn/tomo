@@ -1,4 +1,5 @@
 #include <scenes/tomo_angry.h>
+#include <scenes/tomo_happy.h>
 #include <scenes/tomo_interrupt.h>
 #include <scenes/tomo_interrupta.h>
 #include <scenes/tomo_left_lift.h>
@@ -19,6 +20,10 @@ void TomoInterruptScene::rendition() {
 
         case TOMO_INT_A:
             TomoScene::renderScene<TomoInterruptAScene>();
+            break;
+
+        case TOMO_INT_HAPPY:
+            TomoScene::renderScene<TomoHappyScene>();
             break;
 
         case TOMO_INT_LEFT_LIFT:
