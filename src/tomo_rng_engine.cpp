@@ -8,6 +8,6 @@ void TomoRNGEngine::initializeEngine() {
     bootloader_random_disable();
 }
 
-uint8_t TomoRNGEngine::get(uint8_t min, uint8_t max) {
+uint8_t TomoRNGEngine::get(const uint8_t min, const uint8_t max) {
     return (uint8_t) random(min, max + 1);
 }
