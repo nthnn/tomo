@@ -4,6 +4,7 @@
 #include <tomo_scene.h>
 
 typedef enum {
+    TOMO_INT_ANGRY,
     TOMO_INT_A,
     TOMO_INT_LEFT_LIFT,
     TOMO_INT_RIGHT_LIFT

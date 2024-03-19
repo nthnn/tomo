@@ -27,7 +27,7 @@ public:
     uint8_t getRepeatCount() const;
 
     template <typename T>
-    static bool renderScene(uint8_t repeatCount, bool interruptEnabled = true) {
+    static bool renderScene(uint8_t repeatCount = 1, bool interruptEnabled = true) {
         T scene;
         if(!interruptEnabled)
             scene.disableInterrupt();
