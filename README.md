@@ -5,6 +5,9 @@
 </p>
 
 ![PlatformIO CI](https://github.com/nthnn/tomo/actions/workflows/platformio-ci.yml/badge.svg)
+[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/nthnn/tomo/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-CERN%20Permissive%20v2-blue.svg)](https://github.com/nthnn/tomo/blob/main/LICENSE)
+<a href="https://www.buymeacoffee.com/nthnn"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" height="20px"></a>
 
 <img src="assets/tomo-board.png" align="right" width="250" />
 
@@ -55,26 +58,15 @@ You can get the printable PDF version of schematic diagram [here](pcb/tomo-schem
 
 ## License
 
-```
-Copyright 2024 - Nathanne Isip
+Your use of Tomo is subject to the terms and conditions of the following respective licenses. Make sure to comply with the licensing requirements when using or distributing Tomo.
 
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the “Software”), to deal in the Software without restriction,
-including without limitation the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+* The firmware, including the header files and source files of Tomo, are all under the [GNU GPL v3.0 license](LICENSE/GNU%20GPL%20v3.0.txt).
+* Asset files such as Tomo board preview images, logo, PCB preview, and Piskel facial animations are under the Creative Commons (CC BY-NC-SA 4.0).
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+    [Tomo](https://github.com/nthnn/tomo) © 2024 by [Nathanne Isip](https://github.com/nthnn) is licensed under [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-```
+* The schematic diagram (both in PDF and PNG format) and the PCB gerber file shall be under [CERN OHL Permissive v2 license](LICENSE/CERN%20OHL%20Permissive%20v2.txt).
+
+---
+
+<p align="center"><a href="https://github.com/nthnn/tomo">Tomo</a> &copy; 2024 by <a href="https://github.com/nthnn">Nathanne Isip</a></p>
