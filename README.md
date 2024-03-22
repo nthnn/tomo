@@ -39,6 +39,20 @@ git clone https://github.com/nthnn/tomo --depth 1
 5. Upload the Tomo firmware via PlatformIO.
 6. Your Tomo is now ready!
 
+## PCB Shield-style Design
+
+| Board Front Design                    | Board Back Design                   |
+|---------------------------------------|-------------------------------------|
+| ![Front](assets/tomo-board-front.svg) | ![Back](assets/tomo-board-back.svg) |
+
+## Schematic Diagram
+
+You can get the printable PDF version of schematic diagram [here](pcb/tomo-schematic-diagram.pdf).
+
+<p align="center">
+    <img alt="Tomo Schematic Diagram" src="pcb/tomo-schematic-diagram.png" />
+</p>
+
 ## License
 
 ```
